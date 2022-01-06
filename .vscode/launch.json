@@ -1,0 +1,14 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Python: Main",
+      "type": "python",
+      "request": "launch",
+      "console": "integratedTerminal",
+      "preLaunchTask": "Python: pip install",
+      "program": "__init__.py",
+      "args": ["--log-level", "DEBUG"]
+    }
+  ]
+}
