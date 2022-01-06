@@ -19,6 +19,8 @@ concurrency:
 jobs:
   lint-black:
     uses: timmo001/workflows/.github/workflows/lint-black.yml@master
+    secrets:
+      CODE_PATH: .
   lint-jsonlint:
     uses: timmo001/workflows/.github/workflows/lint-jsonlint.yml@master
   lint-markdown-links:
@@ -29,5 +31,7 @@ jobs:
     uses: timmo001/workflows/.github/workflows/lint-prettier.yml@master
   lint-pylint:
     uses: timmo001/workflows/.github/workflows/lint-pylint.yml@master
+    secrets:
+      CODE_PATH: .
   lint-yamllint:
     uses: timmo001/workflows/.github/workflows/lint-yamllint.yml@master
