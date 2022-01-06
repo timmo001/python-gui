@@ -5,6 +5,12 @@
       "type": "shell",
       "label": "Python: pip install",
       "command": "pip install ."
+    },
+    {
+      "type": "shell",
+      "label": "Python: pyinstaller",
+      "dependsOn": ["Python: pip install"],
+      "command": "pyinstaller --noconfirm python-gui.spec"
     }
   ]
 }
