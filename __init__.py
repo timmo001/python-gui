@@ -1,4 +1,4 @@
-"""Python GUI GUI"""
+"""Python GUI"""
 from argparse import ArgumentParser
 import logging
 
