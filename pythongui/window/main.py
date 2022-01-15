@@ -1,8 +1,9 @@
 """Python GUI GUI: Main window"""
 from argparse import Namespace
 
-from PySide6.QtGui import QCloseEvent, QIcon
-from PySide6.QtWidgets import QFrame, QVBoxLayout
+from PySide6.QtCore import Qt
+from PySide6.QtGui import QCloseEvent, QIcon, QFont
+from PySide6.QtWidgets import QFrame, QVBoxLayout, QLabel
 
 from ..base import Base
 
@@ -23,9 +24,18 @@ class MainWindow(Base, QFrame):
         self.setWindowIcon(icon)
 
         self.layout = QVBoxLayout(self)
-        self.layout.setContentsMargins(0, 0, 0, 0)
+        # self.layout.setContentsMargins(0, 0, 0, 0)
 
-        self.layout.addWidget(self.browser)
+        title = QLabel("Hello World!")
+        title.setFont(QFont("Helvetica Neue", 32))
+        title.setAlignment(Qt.AlignCenter)
+
+        subtitle = QLabel("This is an example Python GUI.")
+        subtitle.setFont(QFont("Helvetica Neue", 14))
+        subtitle.setAlignment(Qt.AlignHCenter)
+
+        self.layout.addWidget(title)
+        self.layout.addWidget(subtitle)
 
     # pylint: disable=invalid-name
     def closeEvent(self, event: QCloseEvent) -> None:
