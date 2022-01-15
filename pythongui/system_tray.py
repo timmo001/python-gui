@@ -2,7 +2,6 @@
 from argparse import Namespace
 from collections.abc import Callable
 from typing import Optional
-from webbrowser import open_new_tab
 
 from PySide6.QtGui import QAction, QIcon
 from PySide6.QtWidgets import QMenu, QSystemTrayIcon, QWidget
