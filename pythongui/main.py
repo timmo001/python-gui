@@ -50,7 +50,7 @@ class Main(Base):
         )
         self.main_window.resize(1280, 720)
         self.main_window.showNormal()
-        self.main_window.hide()
+        # self.main_window.hide()
 
         self.system_tray_icon = SystemTray(
             self.args,
@@ -79,7 +79,6 @@ class Main(Base):
         self.logger.info("Showing window: %s", path)
 
         self.main_window.hide()
-        self.main_window.setup(path)
         self.main_window.resize(width, height)
         screen_geometry = self.application.primaryScreen().availableSize()
         self.main_window.move(
